@@ -274,7 +274,7 @@ webdriver.promise.Deferred = function(opt_canceller, opt_flow) {
     if (newState == webdriver.promise.Deferred.State_.REJECTED &&
         !webdriver.promise.isError_(newValue) &&
         !webdriver.promise.isPromise(newValue)) {
-      newValue = Error(newValue);
+      newValue = newValue;
     }
 
     state = newState;
